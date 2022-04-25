@@ -21,6 +21,7 @@ ENV ACCEPTED_NETWORKS="192.168.0.0/16 172.16.0.0/12 10.0.0.0/8" \
     TLS_VERIFY="may"
 
 COPY files/ /
-
+RUN chmod 755 /entrypoint.sh \
+    && chmod 755 /usr/local/bin/supervisor-watchdog.py
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["supervisord","--nodaemon","--configuration","/etc/supervisord.conf"]
