@@ -19,10 +19,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Assign release version from version.properties to Env variable
-        run: |
-           cat version.properties >> $GITHUB_ENV
-
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1.2.0
 
