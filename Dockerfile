@@ -1,7 +1,7 @@
 FROM alpine:3.15
 
 RUN sed -i 's,https://dl-cdn.alpinelinux.org,http://dl-4.alpinelinux.org,g' /etc/apk/repositories \
-    && apk --update-cache --no-cache --no-install-recommends add \
+    && apk --update-cache --no-cache add \
     "ca-certificates=20211220-r0" \
     "cyrus-sasl-login=2.1.28-r0" \
     "libintl=0.21-r0" \
