@@ -104,20 +104,30 @@ prev-tag-commit-message:
 
 .PHONY: install-hooks
 install-hooks:
-	pre-commit install
+	@pre-commit install
 
 .PHONY: test
 test:
 	@echo "test"
 
 .PHONY: check
-check:
-	pre-commit run --all-files check-merge-conflict
-	pre-commit run --all-files check-yaml
-	pre-commit run --all-files end-of-file-fixer
-	pre-commit run --all-files detect-private-key
-	pre-commit run --all-files trailing-whitespace
-	pre-commit run --all-files black
+check: black files
+	@pre-commit run --all-files check-merge-conflict
+	@pre-commit run --all-files check-yaml
+	@pre-commit run --all-files detect-private-key
+
+.PHONY: files
+files:
+	@pre-commit run --all-files end-of-file-fixer
+	@pre-commit run --all-files trailing-whitespace
+
+.PHONY: black
+black:
+	@pre-commit run --all-files black
+
+.PHONY: clean
+clean:
+	@echo "clean"
 
 .PHONY: makestaging
 makestaging:
