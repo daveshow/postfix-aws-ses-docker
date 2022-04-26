@@ -1,15 +1,15 @@
-FROM alpine:3
+FROM alpine:3.15
 
 RUN sed -i 's,https://dl-cdn.alpinelinux.org,http://dl-4.alpinelinux.org,g' /etc/apk/repositories \
-    && apk --no-cache add \
-    ca-certificates \
-    cyrus-sasl-login \
-    libintl \
-    postfix \
-    rsyslog \
-    supervisor \
-    lmdb \
-    tzdata
+    && apk --update-cache --no-cache add \
+    "ca-certificates=20211220-r0" \
+    "cyrus-sasl-login=2.1.28-r0" \
+    "libintl=0.21-r0" \
+    "postfix=3.6.6-r0" \
+    "rsyslog=8.2108.0-r1" \
+    "supervisor=4.2.2-r2" \
+    "lmdb=0.9.29-r1" \
+    "tzdata=2022a-r0"
 
 ENV ACCEPTED_NETWORKS="192.168.0.0/16 172.16.0.0/12 10.0.0.0/8" \
     RELAY_HOST="email-smtp.us-east-1.amazonaws.com" \
