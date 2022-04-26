@@ -117,6 +117,7 @@ check:
 	pre-commit run --all-files end-of-file-fixer
 	pre-commit run --all-files detect-private-key
 	pre-commit run --all-files trailing-whitespace
+	pre-commit run --all-files black
 
 .PHONY: makestaging
 makestaging:
