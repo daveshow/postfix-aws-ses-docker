@@ -1,4 +1,4 @@
-FROM alpine:3.15
+FROM alpine:3.16.0
 
 RUN sed -i 's,https://dl-cdn.alpinelinux.org,http://dl-4.alpinelinux.org,g' /etc/apk/repositories \
     && apk --update-cache --no-cache add \
