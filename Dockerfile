@@ -6,7 +6,7 @@ RUN sed -i 's,https://dl-cdn.alpinelinux.org,http://dl-4.alpinelinux.org,g' /etc
     "cyrus-sasl-login=2.1.28-r0" \
     "libintl=0.21-r0" \
     "postfix=3.6.6-r0" \
-    "rsyslog=8.2108.0-r1" \
+    "rsyslog=8.2108.0-r2" \
     "supervisor=4.2.2-r2" \
     "lmdb=0.9.29-r1" \
     "tzdata=2022a-r0"
