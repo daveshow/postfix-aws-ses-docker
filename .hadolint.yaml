@@ -1,11 +1,11 @@
 # ignored:
-  # - DL3008
-  # - DL3018
-  # - DL3015
-  # - SC2086
+# - DL3008
+# - DL3018
+# - DL3015
+# - SC2086
 # override:
-  # info:
-    # - DL3008
-    # - DL3018
+# info:
+# - DL3008
+# - DL3018
 trustedRegistries:
-    - docker.io
+  - docker.io
