@@ -1,3 +1,13 @@
+## v0.3.0 (2024-08-24)
+
+### Feat
+
+- update to alpine:3.20
+
+### Refactor
+
+- **.github/dependabot.yml**: remove dependabot for renovate
+
 ## v0.2.1 (2024-08-24)
 
 ### Fix
