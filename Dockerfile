@@ -1,4 +1,4 @@
-FROM alpine:3.16
+FROM alpine:3.20
 
 RUN apk --update-cache --no-cache add \
     "ca-certificates=20240226-r0" \
