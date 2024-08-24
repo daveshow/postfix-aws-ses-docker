@@ -1,3 +1,10 @@
+## v0.4.0 (2024-08-24)
+
+### Fix
+
+- add the Changelog to the ignore file
+-  add repology syntax for alpine packages needing update.
+
 ## v0.3.0 (2024-08-24)
 
 ### Feat
