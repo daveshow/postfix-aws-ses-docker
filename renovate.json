@@ -4,15 +4,25 @@
   "customManagers": [
     {
       "customType": "regex",
+      "description": "Update 'ENV' and '# renovate' in Dockerfiles",
       "fileMatch": ["Dockerfile"],
       "matchStrings": [
         "# renovate: datasource=repology depName=alpine_(?<currentValue>\\d+[._]\\d+)"
       ],
       "currentValueTemplate": "{{{ replace '_' '.' currentValue }}}",
       "datasourceTemplate": "docker",
-      "depNameTemplate": "docker.io/library/alpine",
+      "depNameTemplate": "alpine",
       "versioningTemplate": "regex:^(?<major>\\d+)[._](?<minor>\\d+)$",
       "autoReplaceStringTemplate": "# renovate: datasource=repology depName=alpine_{{{newMajor}}}_{{{newMinor}}}"
+    },
+    {
+      "customType": "regex",
+      "description": "Update _VERSION variables in Dockerfiles",
+      "fileMatch": ["Dockerfile"],
+      "matchStrings": [
+        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=\"(?<currentValue>.*)\"\\s"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     }
   ]
 }
