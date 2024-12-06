@@ -11,7 +11,7 @@
       ],
       "currentValueTemplate": "{{{ replace '_' '.' currentValue }}}",
       "datasourceTemplate": "docker",
-      "depNameTemplate": "selfhostedregistry/alpine",
+      "depNameTemplate": "alpine",
       "versioningTemplate": "regex:^(?<major>\\d+)[._](?<minor>\\d+)$",
       "autoReplaceStringTemplate": "# renovate: datasource=repology depName=alpine_{{{newMajor}}}_{{{newMinor}}}"
     },
