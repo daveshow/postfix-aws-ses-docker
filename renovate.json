@@ -1,14 +1,20 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
-  "customManagers": [
+  "packageRules": [
     {
-      "customType": "regex",
+      "matchDatasources": ["docker"],
+      "matchPackagePatterns": ["^alpine"],
+      "automerge": true
+    }
+  ],
+  "regexManagers": [
+    {
       "fileMatch": ["^Dockerfile$"],
-      "matchStrings": [
-        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=\"(?<currentValue>.*)\"\\s"
-      ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+      "matchStrings": ["ENV (?<depName>\\w+)_VERSION=(?<currentValue>\\S+)"],
+      "datasourceTemplate": "repology",
+      "depNameTemplate": "alpine_3_20/{{depName}}",
+      "versioningTemplate": "loose"
     }
   ]
 }
