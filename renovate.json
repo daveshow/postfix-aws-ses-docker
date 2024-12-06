@@ -3,9 +3,7 @@
   "extends": ["config:recommended"],
   "packageRules": [
     {
-      "matchDatasources": ["docker", "repology"],
-      "automerge": true,
-      "matchPackageNames": ["/^alpine/"]
+      "automerge": true
     }
   ],
   "customManagers": [
