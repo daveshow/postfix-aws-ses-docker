@@ -12,7 +12,7 @@ ENV RSYSLOG_VERSION="8.2404.0-r0"
 # renovate: datasource=repology depName=alpine_3_21/supervisor versioning=loose
 ENV SUPERVISOR_VERSION="4.2.5-r5"
 # renovate: datasource=repology depName=alpine_3_21/lmdb versioning=loose
-ENV LMDB_VERSION="0.9.32-r0"
+ENV LMDB_VERSION="0.9.33-r0"
 # renovate: datasource=repology depName=alpine_3_21/tzdata versioning=loose
 ENV TZDATA_VERSION="2024b-r0"
 
