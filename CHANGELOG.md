@@ -1,3 +1,22 @@
+## v0.4.1 (2024-12-12)
+
+### Fix
+
+- push fix
+- push fix
+- push fix
+- idk
+- idk
+- forgot the datasource
+- remove the matches
+- forgot the datasource
+- possible spacing
+- switching the configuration options
+- try using double quotes
+- tzdata
+- changing the scope of the automerge
+- some older template that works; they should fix this
+
 ## v0.4.0 (2024-08-24)
 
 ### Fix
