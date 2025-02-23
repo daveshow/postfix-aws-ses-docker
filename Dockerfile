@@ -14,7 +14,7 @@ ENV SUPERVISOR_VERSION="4.2.5-r5"
 # renovate: datasource=repology depName=alpine_3_21/lmdb versioning=loose
 ENV LMDB_VERSION="0.9.33-r0"
 # renovate: datasource=repology depName=alpine_3_21/tzdata versioning=loose
-ENV TZDATA_VERSION="2024b-r1"
+ENV TZDATA_VERSION="2025a-r0"
 
 RUN apk --update-cache --no-cache add \
     ca-certificates="${CA_CERTIFICATES_VERSION}" \
