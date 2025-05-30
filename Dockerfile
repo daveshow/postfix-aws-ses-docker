@@ -1,19 +1,19 @@
-FROM alpine:3.21
-# renovate: datasource=repology depName=alpine_3_21/ca-certificates versioning=loose
+FROM alpine:3.22
+# renovate: datasource=repology depName=alpine_3_22/ca-certificates versioning=loose
 ENV CA_CERTIFICATES_VERSION="20241121-r1"
-# renovate: datasource=repology depName=alpine_3_21/cyrus-sasl-login versioning=loose
+# renovate: datasource=repology depName=alpine_3_22/cyrus-sasl-login versioning=loose
 ENV CYRUS_SASL_LOGIN_VERSION="2.1.28-r8"
-# renovate: datasource=repology depName=alpine_3_21/libintl versioning=loose
+# renovate: datasource=repology depName=alpine_3_22/libintl versioning=loose
 ENV LIBINTL_VERSION="0.22.5-r0"
-# renovate: datasource=repology depName=alpine_3_21/postfix versioning=loose
+# renovate: datasource=repology depName=alpine_3_22/postfix versioning=loose
 ENV POSTFIX_VERSION="3.9.4-r0"
-# renovate: datasource=repology depName=alpine_3_21/rsyslog versioning=loose
+# renovate: datasource=repology depName=alpine_3_22/rsyslog versioning=loose
 ENV RSYSLOG_VERSION="8.2410.0-r0"
-# renovate: datasource=repology depName=alpine_3_21/supervisor versioning=loose
+# renovate: datasource=repology depName=alpine_3_22/supervisor versioning=loose
 ENV SUPERVISOR_VERSION="4.2.5-r5"
-# renovate: datasource=repology depName=alpine_3_21/lmdb versioning=loose
+# renovate: datasource=repology depName=alpine_3_22/lmdb versioning=loose
 ENV LMDB_VERSION="0.9.33-r0"
-# renovate: datasource=repology depName=alpine_3_21/tzdata versioning=loose
+# renovate: datasource=repology depName=alpine_3_22/tzdata versioning=loose
 ENV TZDATA_VERSION="2025b-r0"
 
 RUN apk --update-cache --no-cache add \
