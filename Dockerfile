@@ -17,7 +17,7 @@ ENV LMDB_VERSION="0.9.33-r0"
 ENV TZDATA_VERSION="2025b-r0"
 
 RUN apk --update-cache --no-cache add \
-    ca-certificates="${CA_CERTIFICATES_VERSION}" \
+    ca-certificates>"${CA_CERTIFICATES_VERSION}" \
     cyrus-sasl-login="${CYRUS_SASL_LOGIN_VERSION}" \
     libintl="${LIBINTL_VERSION} "\
     postfix="${POSTFIX_VERSION}" \
