@@ -1,6 +1,6 @@
 FROM alpine:3.22
 # renovate: datasource=repology depName=alpine_3_22/ca-certificates versioning=loose
-ENV CA_CERTIFICATES_VERSION="20241121-r2"
+ENV CA_CERTIFICATES_VERSION="20250619-r0"
 # renovate: datasource=repology depName=alpine_3_22/cyrus-sasl-login versioning=loose
 ENV CYRUS_SASL_LOGIN_VERSION="2.1.28-r8"
 # renovate: datasource=repology depName=alpine_3_22/libintl versioning=loose
