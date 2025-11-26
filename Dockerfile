@@ -6,7 +6,7 @@ ENV CYRUS_SASL_LOGIN_VERSION="2.1.28-r8"
 # renovate: datasource=repology depName=alpine_3_22/libintl versioning=loose
 ENV LIBINTL_VERSION="0.24.1-r0"
 # renovate: datasource=repology depName=alpine_3_22/postfix versioning=loose
-ENV POSTFIX_VERSION="3.10.4-r0"
+ENV POSTFIX_VERSION="3.10.6-r0"
 # renovate: datasource=repology depName=alpine_3_22/rsyslog versioning=loose
 ENV RSYSLOG_VERSION="8.2410.0-r1"
 # renovate: datasource=repology depName=alpine_3_22/supervisor versioning=loose
