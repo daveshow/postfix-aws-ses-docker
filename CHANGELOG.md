@@ -1,3 +1,10 @@
+## v0.4.8 (2025-12-04)
+
+### Fix
+
+- pre-commit updates
+- Merge pull request #77 from daveshow/copilot/create-config-migration-pr
+
 ## v0.4.7 (2025-08-22)
 
 ## v0.4.6 (2025-05-30)
