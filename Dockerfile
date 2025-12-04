@@ -19,7 +19,7 @@ ENV TZDATA_VERSION="2025b-r0"
 RUN apk --update-cache --no-cache add \
     ca-certificates>"${CA_CERTIFICATES_VERSION}" \
     cyrus-sasl-login="${CYRUS_SASL_LOGIN_VERSION}" \
-    libintl="${LIBINTL_VERSION} "\
+    libintl="${LIBINTL_VERSION}"\
     postfix="${POSTFIX_VERSION}" \
     rsyslog="${RSYSLOG_VERSION}" \
     supervisor="${SUPERVISOR_VERSION}" \
