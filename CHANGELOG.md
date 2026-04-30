@@ -1,3 +1,9 @@
+## v0.4.9 (2026-04-30)
+
+### Fix
+
+- Merge pull request #90 from daveshow/feature/wip-20260430
+
 ## v0.4.8 (2025-12-04)
 
 ### Fix
