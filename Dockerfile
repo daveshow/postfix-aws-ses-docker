@@ -6,15 +6,15 @@ ENV CYRUS_SASL_LOGIN_VERSION="2.1.28-r9"
 # renovate: datasource=repology depName=alpine_3_23/libintl versioning=loose
 ENV LIBINTL_VERSION="0.24.1-r1"
 # renovate: datasource=repology depName=alpine_3_23/postfix versioning=loose
-ENV POSTFIX_VERSION="3.10.6-r0"
+ENV POSTFIX_VERSION="3.10.8-r0"
 # renovate: datasource=repology depName=alpine_3_23/rsyslog versioning=loose
-ENV RSYSLOG_VERSION="8.2506.0-r0"
+ENV RSYSLOG_VERSION="8.2512.0-r1"
 # renovate: datasource=repology depName=alpine_3_23/supervisor versioning=loose
 ENV SUPERVISOR_VERSION="4.3.0-r0"
 # renovate: datasource=repology depName=alpine_3_23/lmdb versioning=loose
 ENV LMDB_VERSION="0.9.33-r0"
 # renovate: datasource=repology depName=alpine_3_23/tzdata versioning=loose
-ENV TZDATA_VERSION="2025b-r0"
+ENV TZDATA_VERSION="2026b-r0"
 
 RUN apk --update-cache --no-cache add \
     ca-certificates>"${CA_CERTIFICATES_VERSION}" \
