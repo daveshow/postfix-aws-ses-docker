@@ -22,7 +22,22 @@
       "matchStrings": [
         "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>[a-z0-9_-]+)( versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=\"(?<currentValue>.*)\"\\s"
       ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchManagers": ["regex"],
+      "matchPackageNames": [
+        "ca-certificates",
+        "cyrus-sasl-login",
+        "libintl",
+        "postfix",
+        "rsyslog",
+        "supervisor",
+        "lmdb",
+        "tzdata"
+      ],
       "groupName": "Alpine package updates",
       "schedule": ["after 3am on Monday"]
     }
