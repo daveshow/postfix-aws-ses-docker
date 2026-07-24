@@ -5,7 +5,7 @@
     {
       "customType": "regex",
       "description": "Update Alpine version in FROM line",
-      "managerFilePatterns": ["/Dockerfile/"],
+      "fileMatch": ["/Dockerfile/"],
       "matchStrings": [
         "# renovate: datasource=repology depName=alpine_(?<currentValue>\\d+[._]\\d+)"
       ],
@@ -18,11 +18,10 @@
     {
       "customType": "regex",
       "description": "Update package versions in ENV variables",
-      "managerFilePatterns": ["/Dockerfile/"],
+      "fileMatch": ["/Dockerfile/"],
       "matchStrings": [
         "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>[a-z0-9_-]+)( versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=\"(?<currentValue>.*)\"\\s"
-      ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+      ]
     }
   ],
   "packageRules": [
@@ -37,9 +36,12 @@
         "supervisor",
         "lmdb",
         "tzdata"
-      ],
-      "groupName": "Alpine package updates",
-      "schedule": ["after 3am on Monday"]
+      ]
+    },
+    {
+      "matchManagers": ["regex"],
+      "matchDepNames": ["/.*/"],
+      "versioning": "semver"
     }
   ]
 }
