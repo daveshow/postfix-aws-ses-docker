@@ -1,27 +1,27 @@
 FROM alpine:3.24
 # NOTE: Package versions pinned for Alpine 3.24
 # When Alpine version is updated above, review package versions for compatibility
-# renovate: datasource=repology depName=ca-certificates versioning=loose
+# renovate: datasource=repology depName=alpine_3_24/ca-certificates versioning=loose
 ENV CA_CERTIFICATES_VERSION="20260611-r0"
-# renovate: datasource=repology depName=cyrus-sasl-login versioning=loose
+# renovate: datasource=repology depName=alpine_3_24/cyrus-sasl-login versioning=loose
 ENV CYRUS_SASL_LOGIN_VERSION="2.1.28-r9"
-# renovate: datasource=repology depName=libintl versioning=loose
+# renovate: datasource=repology depName=alpine_3_24/libintl versioning=loose
 ENV LIBINTL_VERSION="1.0-r0"
-# renovate: datasource=repology depName=postfix versioning=loose
+# renovate: datasource=repology depName=alpine_3_24/postfix versioning=loose
 ENV POSTFIX_VERSION="3.11.5-r0"
-# renovate: datasource=repology depName=rsyslog versioning=loose
+# renovate: datasource=repology depName=alpine_3_24/rsyslog versioning=loose
 ENV RSYSLOG_VERSION="8.2604.0-r0"
-# renovate: datasource=repology depName=supervisor versioning=loose
+# renovate: datasource=repology depName=alpine_3_24/supervisor versioning=loose
 ENV SUPERVISOR_VERSION="4.3.0-r1"
-# renovate: datasource=repology depName=lmdb versioning=loose
+# renovate: datasource=repology depName=alpine_3_24/lmdb versioning=loose
 ENV LMDB_VERSION="0.9.35-r0"
-# renovate: datasource=repology depName=tzdata versioning=loose
+# renovate: datasource=repology depName=alpine_3_24/tzdata versioning=loose
 ENV TZDATA_VERSION="2026c-r0"
 
 RUN apk --update-cache --no-cache add \
-    ca-certificates>"${CA_CERTIFICATES_VERSION}" \
+    ca-certificates="${CA_CERTIFICATES_VERSION}" \
     cyrus-sasl-login="${CYRUS_SASL_LOGIN_VERSION}" \
-    libintl="${LIBINTL_VERSION}"\
+    libintl="${LIBINTL_VERSION}" \
     postfix="${POSTFIX_VERSION}" \
     rsyslog="${RSYSLOG_VERSION}" \
     supervisor="${SUPERVISOR_VERSION}" \

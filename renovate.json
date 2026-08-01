@@ -1,47 +1,16 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
+  "enabledManagers": ["dockerfile", "github-actions", "custom.regex"],
   "customManagers": [
     {
       "customType": "regex",
-      "description": "Update Alpine version in FROM line",
-      "fileMatch": ["/Dockerfile/"],
-      "matchStrings": [
-        "# renovate: datasource=repology depName=alpine_(?<currentValue>\\d+[._]\\d+)"
-      ],
-      "currentValueTemplate": "{{{ replace '_' '.' currentValue }}}",
-      "datasourceTemplate": "docker",
-      "depNameTemplate": "alpine",
-      "versioningTemplate": "regex:^(?<major>\\d+)[._](?<minor>\\d+)$",
-      "autoReplaceStringTemplate": "# renovate: datasource=repology depName=alpine_{{{newMajor}}}_{{{newMinor}}}"
-    },
-    {
-      "customType": "regex",
       "description": "Update package versions in ENV variables",
-      "fileMatch": ["/Dockerfile/"],
+      "fileMatch": ["^Dockerfile$"],
       "matchStrings": [
-        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>[a-z0-9_-]+)( versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=\"(?<currentValue>.*)\"\\s"
-      ]
-    }
-  ],
-  "packageRules": [
-    {
-      "matchManagers": ["regex"],
-      "matchPackageNames": [
-        "ca-certificates",
-        "cyrus-sasl-login",
-        "libintl",
-        "postfix",
-        "rsyslog",
-        "supervisor",
-        "lmdb",
-        "tzdata"
-      ]
-    },
-    {
-      "matchManagers": ["regex"],
-      "matchDepNames": ["/.*/"],
-      "versioning": "semver"
+        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?) versioning=(?<versioning>.*?)\\s*ENV .*?_VERSION=\"(?<currentValue>.*?)\"\\s"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     }
   ]
 }
